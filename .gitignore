@@ -1,3 +1,3 @@
 sidebar
 kube-tmux
-plugins/*
+!plugins/tpm
