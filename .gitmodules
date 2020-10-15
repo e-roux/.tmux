@@ -1,3 +1,18 @@
-[submodule "plugins/tpm"]
-	path = plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
+[submodule "opt/vim-tmux"]
+	path = opt/vim-tmux
+	url = https://github.com/tmux-plugins/vim-tmux
+[submodule "opt/tmux-battery"]
+	path = opt/tmux-battery
+	url = https://github.com/tmux-plugins/tmux-battery
+[submodule "opt/tmux-yank"]
+	path = opt/tmux-yank
+	url = https://github.com/tmux-plugins/tmux-yank
+[submodule "opt/tmux-prefix-highlight"]
+	path = opt/tmux-prefix-highlight
+	url = https://github.com/tmux-plugins/tmux-prefix-highlight
+[submodule "opt/tmux-resurrect"]
+	path = opt/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "opt/tmux-continuum"]
+	path = opt/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum
