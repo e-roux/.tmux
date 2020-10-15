@@ -16,3 +16,6 @@
 [submodule "opt/tmux-continuum"]
 	path = opt/tmux-continuum
 	url = https://github.com/tmux-plugins/tmux-continuum
+[submodule "opt/tmux-online-status"]
+	path = opt/tmux-online-status
+	url = https://github.com/tmux-plugins/tmux-online-status
