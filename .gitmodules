@@ -13,6 +13,7 @@
 [submodule "opt/tmux-resurrect"]
 	path = opt/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
+  ignore = dirty
 [submodule "opt/tmux-continuum"]
 	path = opt/tmux-continuum
 	url = https://github.com/tmux-plugins/tmux-continuum
