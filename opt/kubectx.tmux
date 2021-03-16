@@ -134,18 +134,18 @@ kube_tmux() {
 
   # Symbol
   if [[ "${KUBE_TMUX_SYMBOL_ENABLE}" == true ]]; then
-    KUBE_TMUX+="#[fg=blue]$(_kube_tmux_symbol)#[fg=colour${1}]"
+    KUBE_TMUX+="#[fg=blue]$(_kube_tmux_symbol)"
   fi
 
   # Context
-  KUBE_TMUX+="#[fg=${2}]${KUBE_TMUX_CONTEXT}"
+  KUBE_TMUX+="#[fg=${1}]${KUBE_TMUX_CONTEXT}"
 
   # Namespace
   if [[ "${KUBE_TMUX_NS_ENABLE}" == true ]]; then
     if [[ -n "${KUBE_TMUX_DIVIDER}" ]]; then
       KUBE_TMUX+="#[fg=colour250]${KUBE_TMUX_DIVIDER}"
     fi
-    KUBE_TMUX+="#[fg=${3}]${KUBE_TMUX_NAMESPACE}"
+    KUBE_TMUX+="#[fg=${2}]${KUBE_TMUX_NAMESPACE}"
   fi
 
   echo "${KUBE_TMUX}"
