@@ -35,22 +35,6 @@ _kube_tmux_binary_check() {
   command -v $1 >/dev/null
 }
 
-_kube_tmux_symbol() {
-  if ((BASH_VERSINFO[0] >= 4)) && [[ $'\u2388 ' != "\\u2388 " ]]; then
-    KUBE_TMUX_SYMBOL=$'\u2388 '
-    KUBE_TMUX_SYMBOL_IMG=$'\u2638 '
-  else
-    KUBE_TMUX_SYMBOL=$'\xE2\x8E\x88 '
-    KUBE_TMUX_SYMBOL_IMG=$'\xE2\x98\xB8 '
-  fi
-
-  if [[ "${KUBE_TMUX_SYMBOL_USE_IMG}" == true ]]; then
-    KUBE_TMUX_SYMBOL="${KUBE_TMUX_SYMBOL_IMG}"
-  fi
-
-  echo "${KUBE_TMUX_SYMBOL}"
-}
-
 _kube_tmux_split() {
   type setopt >/dev/null 2>&1 && setopt SH_WORD_SPLIT
   local IFS=$1
@@ -132,21 +116,12 @@ kube_tmux() {
 
   local KUBE_TMUX
 
-  # Symbol
-  if [[ "${KUBE_TMUX_SYMBOL_ENABLE}" == true ]]; then
-    KUBE_TMUX+="#[fg=blue]$(_kube_tmux_symbol)"
-  fi
-
   # Context
   KUBE_TMUX+="#[fg=${1}]${KUBE_TMUX_CONTEXT}"
 
   # Namespace
-  if [[ "${KUBE_TMUX_NS_ENABLE}" == true ]]; then
-    if [[ -n "${KUBE_TMUX_DIVIDER}" ]]; then
-      KUBE_TMUX+="#[fg=colour250]${KUBE_TMUX_DIVIDER}"
-    fi
-    KUBE_TMUX+="#[fg=${2}]${KUBE_TMUX_NAMESPACE}"
-  fi
+  KUBE_TMUX+="#[fg=colour250]${KUBE_TMUX_DIVIDER}"
+  KUBE_TMUX+="#[fg=${2}]${KUBE_TMUX_NAMESPACE}"
 
   echo "${KUBE_TMUX}"
 }

@@ -17,3 +17,6 @@
 [submodule "opt/tmux-online-status"]
 	path = opt/tmux-online-status
 	url = https://github.com/tmux-plugins/tmux-online-status
+[submodule "solarized-them"]
+	path = opt/tmux-colors-solarized
+	url = https://github.com/seebi/tmux-colors-solarized.git
