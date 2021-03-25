@@ -4,3 +4,4 @@ plugins/*
 !plugins/tpm
 resurrect
 *.swp
+colors/tmuxcolors.conf
