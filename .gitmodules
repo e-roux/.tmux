@@ -7,9 +7,6 @@
 [submodule "opt/tmux-yank"]
 	path = opt/tmux-yank
 	url = https://github.com/tmux-plugins/tmux-yank
-[submodule "opt/tmux-prefix-highlight"]
-	path = opt/tmux-prefix-highlight
-	url = https://github.com/tmux-plugins/tmux-prefix-highlight
 [submodule "opt/tmux-resurrect"]
 	path = opt/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
