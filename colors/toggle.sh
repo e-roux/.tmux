@@ -44,7 +44,14 @@ main() {
   # alacritty
   yq e '.colors alias="'$COLOR_THEME'"' -i ~/.config/alacritty/alacritty.yml
 
+  # vim
   make_vim_color_link "$COLOR_THEME"
+
+  # bat
+  export BAT_THEME="Solarized (${COLOR_THEME})"
+  tmux setenv -g -t 0 BAT_THEME "Solarized (${COLOR_THEME})"
 }
 
 main || exit 1
+
+# vim: set ft=bash:
