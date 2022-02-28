@@ -1,9 +1,6 @@
 [submodule "opt/vim-tmux"]
 	path = opt/vim-tmux
 	url = https://github.com/tmux-plugins/vim-tmux
-[submodule "opt/tmux-battery"]
-	path = opt/tmux-battery
-	url = https://github.com/tmux-plugins/tmux-battery
 [submodule "opt/tmux-yank"]
 	path = opt/tmux-yank
 	url = https://github.com/tmux-plugins/tmux-yank
@@ -17,3 +14,6 @@
 [submodule "solarized-them"]
 	path = opt/tmux-colors-solarized
 	url = https://github.com/seebi/tmux-colors-solarized.git
+[submodule "urlview"]
+	path = opt/tmux-urlview
+	url = https://github.com/tmux-plugins/tmux-urlview
